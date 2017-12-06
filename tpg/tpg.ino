@@ -1,4 +1,4 @@
-// echo serial input
+// output the test pattern requested over serial
 
 void setup()
 {
@@ -15,8 +15,7 @@ void setup()
   uint8_t char##_n = Serial.read();     \
   while (255 == char##_n) {             \
     char##_n = Serial.read();           \
-  }                                     \
-  Serial.print(' ');                    \  
+  }                                     \  
     switch(char##_n) {                  \
       case '1':                         \
         port_b_high |= 1 << _n;         \
